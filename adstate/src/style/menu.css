@@ -1,0 +1,21 @@
+li {
+    float: left;
+    list-style: none;
+    padding: 10px 15px 15px 15px;
+    font-size: 20px;
+}
+
+li a {
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #6b7b8e;
+    padding: 10px 15px 15px 15px;
+}
+
+.menu {
+    border-bottom: white solid 1px;
+    position: relative;
+    height: 50px;
+}

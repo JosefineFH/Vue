@@ -1,0 +1,17 @@
+select {
+  font-size: 20px;
+  width: 25%;
+  border: none;
+  border-bottom: #8fbbaf 1px solid;
+  background-color: white;
+}
+
+p {
+  font-size: 20px;
+}
+
+input {
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #8fbbaf;
+}
