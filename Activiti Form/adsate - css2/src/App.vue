@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <nav>
-        <a id="logo">Welcome</a>
+        <a id="logo" @click="indexPage()">Welcome</a>
         <a @click="goPage1()">Load</a>
 
         <a @click="goPage2()">Edit</a>
@@ -20,15 +20,16 @@
 import LoadData from "@/components/LoadData";
 import SaveData from "@/components/SaveData";
 import ShowData from "@/components/ShowData";
+// import Index from "@/components/Index";
 
 export default {
   name: "App",
   data: function() {
     return {
       person: {
-        firstname: "Kari",
-        lastname: "Nordmann",
-        email: "Kari.Nordman@norge.no",
+        firstname: "",
+        lastname: "",
+        email: "",
         address: "",
         gender: "",
         purpose: "",
@@ -46,10 +47,16 @@ export default {
       this.person.purpose = fromComponent.purpose;
       this.person.activities = fromComponent.activities;
     },
-    async goPage1() {
-      this.$emit("save", this.person);
+    async indexPage(){
+       this.$emit("save", this.person);
       this.$router.push("/");
     },
+    
+    async goPage1() {
+      this.$emit("save", this.person);
+      this.$router.push("LoadData");
+    },
+
 
     async goPage2() {
       this.$emit("save", this.person);

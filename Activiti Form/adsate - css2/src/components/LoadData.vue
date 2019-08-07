@@ -16,7 +16,6 @@
       <button id="saveButton" @click="save()">Save</button>
     </div>
     <footer>
-      <img id="facebookFooter" src="../img/facebook-circled.png" alt>
     </footer>
   </div>
 </template>
