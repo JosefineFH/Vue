@@ -2,12 +2,22 @@
   <div class="grid-container" >
  <div class="grid-img"> 
   
-<!-- <img class="svgImage" src="../img/undraw_activity_tracker_1l9o.svg" alt="activity"> -->
+<img class="svgImage" src="../img/undraw_super_woman_dv0y.svg" alt="activity"> 
 </div> 
 <div class="grid-info">
   <h1>Our activitys</h1>
+  <h2>Football</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est quasi animi rerum maiores nobis hic, a odio cum fuga aut molestiae, ipsam quibusdam iste debitis ducimus, officia earum accusantium.</p>
+
+  <h2>Basketball</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est quasi animi rerum maiores nobis hic, a odio cum fuga aut molestiae, ipsam quibusdam iste debitis ducimus, officia earum accusantium.</p>
+
+  <h2>Handball</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est quasi animi rerum maiores nobis hic, a odio cum fuga aut molestiae, ipsam quibusdam iste debitis ducimus, officia earum accusantium.</p>
+
+  <h2>E-sport</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est quasi animi rerum maiores nobis hic, a odio cum fuga aut molestiae, ipsam quibusdam iste debitis ducimus, officia earum accusantium.</p>
-<!-- <button @click="goPage1()">REGISTER</button> -->
+<button @click="goPage1()">REGISTER</button> 
 </div>
 
 
@@ -50,17 +60,17 @@ button{
 }
 .grid-info{
   color: aliceblue;
-  grid-column: 3;
+  grid-column: 1;
   grid-row: 1 / span 2;
-  padding-right: 20px;
+  padding-left: 20px;
 }
 .grid-img{
-  grid-column: 1 / span 2;
+  grid-column: 2 / span 3;
   grid-row: 1;
 }
 .svgImage{
   padding: 50px;
-  width: 90%;
+  width: 80%;
 }
 </style>
 
