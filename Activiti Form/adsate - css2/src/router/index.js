@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import LoadData from '@/components/LoadData'
-import SaveData from '@/components/SaveData'
-import ShowData from '@/components/ShowData'
-import Index from '@/components/index'
+import Register from '@/components/Register'
+import Activity from '@/components/Activity'
+import Order from '@/components/Order'
+import Index from '@/components/Index'
+import OurActivitys from'@/components/OurActivitys'
 
 
 Vue.use(Router)
@@ -17,21 +18,27 @@ export default new Router({
       props: true
     },
     {
-      path: '/LoadData',
-      name: 'LoadData',
-      component: LoadData,
+      path: '/OurActivitys',
+      name: 'OurActivitys',
+      component: OurActivitys,
       props: true
     },
     {
-      path: '/SaveData',
-      name: 'SaveData',
-      component: SaveData,
+      path: '/Register',
+      name: 'Register',
+      component: Register,
       props: true
     },
     {
-      path: '/ShowData',
-      name: 'ShowData',
-      component: ShowData,
+      path: '/Activity',
+      name: 'Activity',
+      component: Activity,
+      props: true
+    },
+    {
+      path: '/Order',
+      name: 'Order',
+      component: Order,
       props: true
     }
   ]

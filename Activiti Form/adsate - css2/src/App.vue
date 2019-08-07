@@ -3,11 +3,13 @@
     <header>
       <nav>
         <a id="logo" @click="indexPage()">Welcome</a>
-        <a @click="goPage1()">Load</a>
+        <a @click="indexPage()">HOME</a>
+                <a @click="OurActivitys()">OUT ACTIVITYS</a>
+        <a @click="goPage1()">REGISTER</a>
 
-        <a @click="goPage2()">Edit</a>
+        <a @click="goPage2()">ACTIVITY</a>
 
-        <a @click="goPage3()">Show</a>
+        <a @click="goPage3()">ORDER</a>
 
         <img id="facebook" src="./img/facebook-circled.png" alt="facebook">
       </nav>
@@ -17,10 +19,10 @@
 </template>
 
 <script>
-import LoadData from "@/components/LoadData";
-import SaveData from "@/components/SaveData";
-import ShowData from "@/components/ShowData";
-// import Index from "@/components/Index";
+import Register from "@/components/Register";
+import Activity from "@/components/Activity";
+import Order from "@/components/Order";
+import OurActivitys from "@/components/OurActivitys";
 
 export default {
   name: "App",
@@ -51,21 +53,26 @@ export default {
        this.$emit("save", this.person);
       this.$router.push("/");
     },
+
+    async OurActivitys(){
+      this.$emit("save", this.person);
+      this.$router.push("OurActivitys");
+    },
     
     async goPage1() {
       this.$emit("save", this.person);
-      this.$router.push("LoadData");
+      this.$router.push("Register");
     },
 
 
     async goPage2() {
       this.$emit("save", this.person);
-      this.$router.push("SaveData");
+      this.$router.push("Activity");
     },
 
     async goPage3() {
       this.$emit("save", this.person);
-      this.$router.push("ShowData");
+      this.$router.push("Order");
     }
   }
 };
