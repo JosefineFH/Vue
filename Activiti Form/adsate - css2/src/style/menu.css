@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
-
-
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap');
 nav {
   width: 100%;
   height: 60px;
-  background-color: #393c83;
   overflow: hidden;
   border-bottom-left-radius: 20px;
 }
@@ -12,8 +9,8 @@ nav {
 nav a {
   display: block;
   float: left;
-  font-family: sans-serif;
-  font-size: 18px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 25px;
   color: white;
   padding-top: 20px;
   padding-right: 10px;
@@ -23,14 +20,13 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #17b0cf;
+  font-size: 30px;
 }
 
 #logo {
   /*font*/
-  font-family: 'Abril Fatface',
-    cursive;
-  font-size: 40px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 45px;
   letter-spacing: -2px;
   text-shadow: 1px 1px 2px #c4c4c4;
   /*box*/
@@ -38,10 +34,6 @@ nav a:hover {
   padding-right: 40px;
   margin-right: 10px;
   margin-top: -20px;
-}
-
-img {
-  float: right;
 }
 
 @media only screen and (max-with: 600px) {
