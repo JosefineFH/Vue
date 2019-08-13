@@ -5,15 +5,14 @@
 <img class="svgImage" src="../img/undraw_activity_tracker_1l9o.svg" alt="activity">
 </div> 
 <div class="grid-info">
-  <h1>Choose your activity</h1>
+  <h1>Welcome to Girl Camp</h1>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est quasi animi rerum maiores nobis hic, a odio cum fuga aut molestiae, ipsam quibusdam iste debitis ducimus, officia earum accusantium.</p>
 <button @click="goPage1()">REGISTER</button>
 </div>
 
-
-    <footer>
-
-    </footer>
+    <div class="footer">
+<p>Contackt:</p>
+    </div>
   </div>
 </template>
 
@@ -62,5 +61,14 @@ button{
   padding: 50px;
   width: 90%;
 }
+  .footer
+  {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    color: aliceblue;
+    border: solid 1px white;
+    width: 100%;
+    padding-left: 10px;
+  }
 </style>
 

@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <nav>
-        <a id="logo" @click="indexPage()">Welcome</a>
+        <a id="logo" @click="indexPage()">Girl Camp</a>
         <a @click="indexPage()">HOME</a>
                 <a @click="OurActivitys()">OUT ACTIVITYS</a>
         <a @click="goPage1()">REGISTER</a>
@@ -10,8 +10,6 @@
         <a @click="goPage2()">ACTIVITY</a>
 
         <a @click="goPage3()">ORDER</a>
-
-        <img id="facebook" src="./img/facebook-circled.png" alt="facebook">
       </nav>
     </header>
     <router-view :personprop="person" @save="save"/>
@@ -79,7 +77,6 @@ export default {
 </script>
 
 <style>
-@import "./style/header.css";
 @import "./style/main.css";
 @import "./style/menu.css";
 </style>
