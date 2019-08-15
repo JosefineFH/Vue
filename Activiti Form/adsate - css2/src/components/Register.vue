@@ -1,17 +1,44 @@
 <template>
   <div id="wrapper">
     <div id="main">
-      <h3>Load your information</h3>
-      <button id="loadData" @click="showData()">Load Data</button>
-      <br>
-      <p>First Name:</p>
-      <input id="firstName" type="text" v-model="person.firstname">
+      <h1>Register</h1>
+      <p>Enter your information here and your child's information.</p>
+      <!-- <button id="loadData" @click="showData()">Load Data</button> -->
+      <div class="Parentinfo">
+      <p>Parents Information:</p>
 
-      <p>Last Name:</p>
-      <input id="lastName" type="text" v-model="person.lastname">
+      <label class="FullName">Full Name:</label>
+      <input id="FullName" type="text" v-model="person.FullName">
 
-      <p>Email:</p>
+      <label for="Email">Email:</label>
       <input id="email" type="text" v-model="person.email">
+
+<label> Adress: </label>
+<label> ZipCode</label>
+<label> Country</label>
+      </div>
+      
+      <hr>
+
+      <div class="Childesinfo">
+
+      <p>Your Childe Information:</p>
+      <p>Full Name :</p>
+      <input id="ChildeFullName" type="text" v-model="person.ChildeFullName">
+
+      <p>Age:</p>
+      <select name="" id="">
+        <option value="">13</option>
+        <option value="">14</option>
+        <option value="">15</option>
+        <option value="">16</option>
+        <option value="">17</option>
+        <option value="">18</option>
+      </select>
+
+      <p>If ther is any other information we should know please inform us:</p>
+      <textarea name="extraInfo" class="extraInfo" cols="50" rows="10"></textarea>
+      </div>
       <br>
       <button id="saveButton" @click="save()">Save</button>
     </div>
@@ -29,52 +56,39 @@ export default {
   data() {
     return {
       person: {
-        firstname: null,
-        lastname: null,
+        FullName: null,
         email: null
+        
       }
     };
   },
   created: function() {
-    this.person.firstname = this.personprop.firstname;
-    this.person.lastname = this.personprop.lastname;
+    this.person.FullName = this.personprop.FullName;
     this.person.email = this.personprop.email;
   },
   methods: {
-    async showData() {
-      const url = "https://api.myjson.com/bins/rhfcg";
-      const response = await Axios.get(url);
-      this.person = response.data;
-    },
-
-    async goPage2() {
-      this.$emit("save", this.person);
-      this.$router.push("SaveData");
-    },
-    async goPage3() {
-      this.$emit("save", this.person);
-      this.$router.push("ShowData");
-    },
+    // async showData() {
+    //   const url = "https://api.myjson.com/bins/rhfcg";
+    //   const response = await Axios.get(url);
+    //   this.person = response.data;
+    // },
 
     save(error) {
       alert("Your information has been saved!");
+      console.log(this.person);
       this.$emit("save", this.person);
     }
   }
 };
 </script>
 <style >
-@import "../style/menu.css";
 </style>
 <style scoped >
-h3 {
-  margin-left: 35%;
+.Childesinfo{
+  border: 1px white solid;
 }
-
-@media only screen and (max-width: 600px) {
-  h3 {
-    margin-left: 15%;
-  }
+.Parentinfo{
+  border: 1px white solid;
 }
 </style>
 
