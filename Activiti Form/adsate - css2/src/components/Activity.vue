@@ -4,12 +4,7 @@
       <div id="main">
         <h3>Edit your information</h3>
         <p>
-          First Name:
-          {{personprop.firstname}}
-        </p>
-        <p>
-          Last Name:
-          {{personprop.lastname}}
+        Name: {{personprop.FullName}}
         </p>
         <p>
           Email:
@@ -73,7 +68,6 @@
       </div>
     </section>
     <footer>
-      <img id="facebookFooter" src="../img/facebook-circled.png" alt>
     </footer>
   </div>
 </template>
@@ -85,7 +79,7 @@ export default {
   data() {
     return {
       person: {
-        firstname: this.personprop.firstname,
+        FullName: this.personprop.FullName,
         lastname: this.personprop.lastname,
         email: this.personprop.email,
         address: null,
@@ -96,7 +90,7 @@ export default {
     };
   },
   created: function() {
-    this.person.firstname = this.personprop.firstname;
+    this.person.FullName = this.personprop.FullName;
     this.person.lastname = this.personprop.lastname;
     this.person.email = this.personprop.email;
     this.person.address = this.personprop.address;
@@ -118,8 +112,6 @@ export default {
 };
 </script>
 <style scoped>
-@import "../style/menu.css";
-
 .gender {
   display: inline;
   margin-left: -90px;

@@ -2,7 +2,7 @@
   <div class="grid-container" >
  <div class="grid-img"> 
   
-<img class="svgImage" src="../img/undraw_super_woman_dv0y.svg" alt="activity"> 
+<img class="svgImage" src="../Assets/img/undraw_super_woman_dv0y.svg" alt="activity"> 
 </div> 
 <div class="grid-info">
   <h1>Our activitys</h1>
@@ -11,7 +11,9 @@
 
   <h2>Basketball</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est quasi animi rerum maiores nobis hic, a odio cum fuga aut molestiae, ipsam quibusdam iste debitis ducimus, officia earum accusantium.</p>
+</div>
 
+<div class="grid-MoreInfo">
   <h2>Handball</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est quasi animi rerum maiores nobis hic, a odio cum fuga aut molestiae, ipsam quibusdam iste debitis ducimus, officia earum accusantium.</p>
 
@@ -40,7 +42,6 @@ export default {
 };
 </script>
 <style >
-@import "../style/menu.css";
 </style>
 
 <style scoped >
@@ -55,22 +56,28 @@ button{
 }
 .grid-container{
   display: grid;
-   grid-template-columns: auto  600px;
+   grid-template-columns: auto  400px;
   grid-gap: 10px;
+  padding: 20px 10px 0px 20px;
 }
 .grid-info{
-  color: aliceblue;
-  grid-column: 1;
-  grid-row: 1 / span 2;
-  padding-left: 20px;
+  grid-column: 1 ;
+  grid-row: 1 ;
+  width: 500px;
+  height: 100%;
+}
+
+.grid-MoreInfo{
+  grid-column: 1/ 3;
+  grid-row: 2;
+
 }
 .grid-img{
-  grid-column: 2 / span 3;
+  grid-column: 2;
   grid-row: 1;
 }
 .svgImage{
-  padding: 50px;
-  width: 80%;
+  width: 100%;
 }
 </style>
 

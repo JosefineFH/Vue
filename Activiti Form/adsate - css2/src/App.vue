@@ -1,34 +1,28 @@
 <template>
   <div id="app">
     <header>
-      <nav>
-        <a id="logo" @click="indexPage()">Girl Camp</a>
-        <a @click="indexPage()">HOME</a>
-                <a @click="OurActivitys()">OUT ACTIVITYS</a>
-        <a @click="goPage1()">REGISTER</a>
 
-        <a @click="goPage2()">ACTIVITY</a>
-
-        <a @click="goPage3()">ORDER</a>
-      </nav>
+      <NavBar></NavBar>
     </header>
     <router-view :personprop="person" @save="save"/>
+  <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Register from "@/components/Register";
-import Activity from "@/components/Activity";
-import Order from "@/components/Order";
-import OurActivitys from "@/components/OurActivitys";
+import NavBar from "../src/Assets/Nav.vue";
+import Footer from "../src/Assets/Footer";
 
-export default {
-  name: "App",
-  data: function() {
-    return {
+ export default {
+   name: "App",
+   components:{
+     'NavBar': NavBar,
+     'Footer': Footer
+   },
+   data: function() {
+     return {
       person: {
-        firstname: "",
-        lastname: "",
+        FullName: "",
         email: "",
         address: "",
         gender: "",
@@ -39,18 +33,17 @@ export default {
   },
   methods: {
     save: function(fromComponent) {
-      this.person.firstname = fromComponent.firstname;
-      this.person.lastname = fromComponent.lastname;
+      this.person.FullName = fromComponent.FullName;
       this.person.email = fromComponent.email;
       this.person.address = fromComponent.address;
       this.person.gender = fromComponent.gender;
       this.person.purpose = fromComponent.purpose;
       this.person.activities = fromComponent.activities;
     },
-    async indexPage(){
-       this.$emit("save", this.person);
-      this.$router.push("/");
-    },
+    // async indexPage(){
+    //    this.$emit("save", this.person);
+    //   this.$router.push("/");
+    // },
 
     async OurActivitys(){
       this.$emit("save", this.person);
@@ -74,9 +67,8 @@ export default {
     }
   }
 };
-</script>
+ </script>
 
 <style>
-@import "./style/main.css";
-@import "./style/menu.css";
+@import "./Assets/style/main";
 </style>
