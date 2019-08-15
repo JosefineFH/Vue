@@ -14,7 +14,6 @@
       </div>
     </section>
     <footer>
-      <img id="facebookFooter" src="../img/facebook-circled.png" alt>
     </footer>
   </div>
 </template>
